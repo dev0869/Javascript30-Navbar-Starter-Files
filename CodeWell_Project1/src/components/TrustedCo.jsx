@@ -5,7 +5,7 @@ const TrustedCo = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-4">
-        <p className="para ">
+        <p className="para  font-semibold">
           Trusted by 3+ million people at companies like
         </p>
         <div className="flex  flex-wrap gap-9 justify-center">
