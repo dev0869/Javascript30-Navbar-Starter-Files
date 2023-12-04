@@ -4,9 +4,9 @@ import { AlternativeToLogo } from "../assets/imgs";
 const Content = () => {
   return (
     <>
-      <div className=" flex  items-center gap-[35px] my-[20px]">
+      <div className=" flex  items-center gap-[35px] my-[35px] md:my-[20px]">
         <div className="flex flex-col">
-          <h1 className="text-[55px] leading-[65px] text-[#171615] font-bold">
+          <h1 className="text-[35px] md:text-[55px] leading-[44px] md:leading-[65px] text-[#171615] font-bold">
             Onedeck is your Remote{" "}
             <span className="text-[#F6B200]">conference calling tool</span>
           </h1>
@@ -29,7 +29,7 @@ const Content = () => {
           </div>
         </div>
 
-        <div className="py-[60px]">
+        <div className="max-[1020px]:hidden  py-[60px]">
           <img src={Hero} alt="img" width={565} />
         </div>
       </div>

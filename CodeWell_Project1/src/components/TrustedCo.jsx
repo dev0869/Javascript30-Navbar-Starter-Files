@@ -5,14 +5,14 @@ const TrustedCo = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-4">
-        <p className="para text-sm">
+        <p className="para ">
           Trusted by 3+ million people at companies like
         </p>
-        <div className="flex gap-4">
+        <div className="flex  flex-wrap gap-9 justify-center">
           {Imgs.map((ele, id) => {
             return (
-              <div key={id} className="flex fle" >
-                <img src={ele} alt="" />
+              <div key={id} className="flex  " >
+                <img src={ele} alt="" className="w-[150px]" />
               </div>
             );
           })}

@@ -1,6 +1,9 @@
 import { useState } from "react";
-import { Logo } from "../assets/imgs";
-import DrpDwn from "./DrpDwn";
+import { Logo, Menu } from "../assets/imgs";
+import DrpDwn, { MobDrpdwn } from "./DrpDwn";
+import { signal } from "@preact/signals-react";
+
+export const mobhover = signal(false);
 
 export const Button = () => {
   return (
@@ -13,7 +16,8 @@ export const Button = () => {
 };
 
 const Navbar = () => {
-  const [hover, setHover] = useState(true);
+  const [hover, setHover] = useState(false);
+  // const [mobhover, setMobhover] = useState(false);
 
   const Options = ["Product", "Challenges", "Resources", "Other Links"];
 
@@ -31,12 +35,12 @@ const Navbar = () => {
         <div>
           <img src={Logo} alt="" />
         </div>
-        <div className="relative flex  gap-8">
+        <div className="relative flex  max-[1020px]:hidden gap-8">
           {Options.map((ele) => (
             <>
               <p
                 onMouseEnter={() => handleDropDown(ele)}
-                className="  cursor-pointer hover:font-gray-900  text-gray-700"
+                className="  cursor-pointer hover:text-[#251C3B] text-gray-700"
               >
                 {ele}
               </p>
@@ -44,10 +48,17 @@ const Navbar = () => {
           ))}
           {hover ? <DrpDwn /> : null}
         </div>
-        <div className="flex gap-6 items-center">
+        <div className="cursor-pointer  max-[1020px]:hidden flex gap-6 items-center">
           <p className="  text-gray-700">Sign In</p>
           <Button />
         </div>
+        <img
+          onClick={() => (mobhover.value = !mobhover.value)}
+          className="block lg:hidden"
+          src={Menu}
+          alt=""
+        />
+        {mobhover ? <MobDrpdwn /> : null}
       </nav>
     </>
   );

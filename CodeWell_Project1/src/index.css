@@ -24,6 +24,7 @@
   border-radius: 15px;
   padding: 30px;
 }
+
 .drpdown::after {
   border-bottom: 16px solid white;
   border-left: 8px solid transparent;
@@ -34,4 +35,13 @@
   top: -8px;
 
   position: absolute;
+}
+
+
+@media screen and (max-width: 400px) {
+  .drpdown::after {
+   
+
+    position: relative !important;
+  }
 }

@@ -13,6 +13,9 @@ export {default as Spense_Icon} from '../imgs/Spense_Icon.svg'
 export {default as Fiber_Icon} from '../imgs/Fiber_Icon.svg'
 export {default as Gradie_Icon} from '../imgs/Gradie_Icon.svg'
 
+export {default as Menu} from '../imgs/Menu.svg'
+export {default as Close} from '../imgs/Close.svg'
+
 
 
 
