@@ -2,19 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Inter;
-  background-color: #F3EDE5;
+  background-color: #f3ede5;
 }
 
 @font-face {
   font-family: Inter;
-  src: url('./assets/fonts/Inter.ttf');
+  src: url("./assets/fonts/Inter.ttf");
 }
 
 .para {
   @apply text-gray-700;
+}
+
+.drpdown {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+}
+.drpdown::after {
+  border-bottom: 16px solid white;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  left: 42px;
+  content: "";
+  top: -8px;
+
+  position: absolute;
 }

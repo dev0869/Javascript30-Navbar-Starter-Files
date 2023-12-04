@@ -9,3 +9,10 @@ export {default as AlternativeToLogo} from '../imgs/AlternativeToLogo.svg'
 export {default as CapterraLogo} from '../imgs/CapterraLogo.svg'
 
 
+export {default as Spense_Icon} from '../imgs/Spense_Icon.svg'
+export {default as Fiber_Icon} from '../imgs/Fiber_Icon.svg'
+export {default as Gradie_Icon} from '../imgs/Gradie_Icon.svg'
+
+
+
+

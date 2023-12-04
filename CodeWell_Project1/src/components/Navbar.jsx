@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Logo } from "../assets/imgs";
+import DrpDwn from "./DrpDwn";
 
 export const Button = () => {
   return (
@@ -11,20 +13,36 @@ export const Button = () => {
 };
 
 const Navbar = () => {
+  const [hover, setHover] = useState(true);
+
   const Options = ["Product", "Challenges", "Resources", "Other Links"];
+
+  const handleDropDown = (option) => {
+    if (option === "Product") {
+      setHover(true);
+    } else {
+      setHover(false);
+    }
+  };
 
   return (
     <>
       <nav className=" flex items-center justify-between">
         <div>
-          <img src={Logo} alt=""  />
+          <img src={Logo} alt="" />
         </div>
-        <div className="flex gap-4">
+        <div className="relative flex  gap-8">
           {Options.map((ele) => (
             <>
-              <p className="  text-gray-700">{ele}</p>
+              <p
+                onMouseEnter={() => handleDropDown(ele)}
+                className="  cursor-pointer hover:font-gray-900  text-gray-700"
+              >
+                {ele}
+              </p>
             </>
           ))}
+          {hover ? <DrpDwn /> : null}
         </div>
         <div className="flex gap-6 items-center">
           <p className="  text-gray-700">Sign In</p>
